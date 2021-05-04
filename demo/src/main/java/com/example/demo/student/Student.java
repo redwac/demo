@@ -20,7 +20,7 @@ public class Student {
             generator = "student_sequence"
     )
     private Long id;
-    private String Name;
+    private String name;
     private String email;
     private LocalDate dob;
     @Transient
@@ -35,7 +35,7 @@ public class Student {
                    String email,
                    LocalDate dob) {
         this.id = id;
-        Name = name;
+        this.name = name;
         this.email = email;
         this.dob = dob;
 
@@ -44,7 +44,7 @@ public class Student {
     public Student(String name,
                    String email,
                    LocalDate dob) {
-        Name = name;
+        this.name = name;
         this.email = email;
         this.dob = dob;
 
@@ -59,11 +59,11 @@ public class Student {
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getEmail() {
@@ -95,7 +95,7 @@ public class Student {
     public String toString() {
         return "Student{" +
                 "id=" + id +
-                ", Name='" + Name + '\'' +
+                ", Name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", dob=" + dob +
                 ", age=" + age +
